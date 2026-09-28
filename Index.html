@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Airtel Xtreme WiFi Provider Bhopal - broadband plans, IPTV, OTT and new connection booking.">
+    <title>AIRTEL XTREME WIFI PROVIDER BHOPAL</title>
+    <style>
+        :root {
+            --primary: #e40000;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+            --whatsapp: #25D366;
+            --iptv-purple: #7b1fa2;
+            --iptv-green: #1b5e20;
+            --ott-orange: #e65100;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: #fff;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .logo span {
+            color: var(--dark);
+            display: block;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), #111;
+            color: white;
+            text-align: center;
+            padding: 45px 20px 30px;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            color: #ffcc00;
+            font-weight: 600;
+        }
+
+        .offer-strip {
+            background: #fff3cd;
+            border: 2px dashed #d39e00;
+            padding: 15px;
+            margin: 20px auto 0;
+            max-width: 800px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: #333;
+        }
+
+        .offer-tag h4 {
+            font-size: 13px;
+            text-transform: uppercase;
+            color: #666;
+        }
+
+        .offer-tag .amt {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .offer-badge {
+            background: #000;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .section {
+            padding: 40px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+        }
+
+        .plan-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border: 2px solid #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .plan-card.popular { border-color: var(--primary); }
+        .plan-card.iptv-p { border-color: var(--iptv-purple); }
+        .plan-card.iptv-g { border-color: var(--iptv-green); }
+        .plan-card.ott-special { border-color: var(--ott-orange); }
+
+        .plan-price {
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        .price-red { color: var(--primary); }
+        .price-blue { color: #0056b3; }
+        .price-purple { color: var(--iptv-purple); }
+        .price-green { color: var(--iptv-green); }
+        .price-orange { color: var(--ott-orange); }
+
+        .speed-pill {
+            display: inline-block;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        .pill-red { background: var(--primary); }
+        .pill-blue { background: #0056b3; }
+        .pill-purple { background: var(--iptv-purple); }
+        .pill-green { background: var(--iptv-green); }
+        .pill-orange { background: var(--ott-orange); }
+
+        .subtag {
+            font-size: 11px;
+            font-weight: 700;
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+
+        .features {
+            list-style: none;
+            margin: 15px 0;
+            text-align: left;
+            font-size: 13px;
+        }
+
+        .features li {
+            padding: 5px 0;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .tagline {
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 5px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            background: #f8f9fa;
+        }
+
+        .form-box {
+            background: white;
+            max-width: 520px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 14px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .contact-info-box {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            font-size: 14px;
+        }
+
+        .contact-info-box h3 {
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .address-text {
+            background: #f1f3f5;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 10px 0;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .contact-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            background: white;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .contact-btn {
+            flex: 1;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-call {
+            background: var(--primary);
+        }
+
+        .btn-whatsapp {
+            background: var(--whatsapp);
+        }
+
+        footer {
+            background: var(--dark);
+            color: #aaa;
+            text-align: center;
+            padding: 25px 20px 80px;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+            
+            .offer-strip {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">AIRTEL XTREME <span>WIFI PROVIDER BHOPAL</span></div>
+        <a href="#book" class="btn">Book Now</a>
+    </header>
+
+    <section class="hero">
+        <h1>AIRTEL XTREME WIFI PROVIDER BHOPAL</h1>
+        <p>Get Ultra-Fast Fiber Broadband + 350+ Live TV Channels & OTT Apps</p>
+        
+        <div class="offer-strip">
+            <div class="offer-tag">
+                <h4>Installation Fee</h4>
+                <div class="amt">FREE</div>
+            </div>
+            <div class="offer-tag">
+                <h4>Wi-Fi Router</h4>
+                <div class="amt">FREE</div>
+            </div>
+            <div class="offer-badge">Limited Period Offer</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Official Airtel Broadband & IPTV Plans</h2>
+        <div class="plans-grid">
+            
+            <!-- Plan 499 -->
+            <div class="plan-card popular">
+                <div>
+                    <span class="subtag">Unlimited Data & Voice</span>
+                    <div class="tagline" style="color: var(--primary);">Basic Wi-Fi</div>
+                    <div class="plan-price price-red">₹499<span style="font-size:12px; font-weight:normal;">/mo</span></div>
+                    <div class="speed-pill pill-red">Up to 40 Mbps</div>
+                    <ul class="features">
+                        <li>Unlimited Data & Voice Calls</li>
+                        <li>Free Wi-Fi Router Included</li>
+                        <li>24x7 Customer Support</li>
+                        <li>Superfast Internet Value Plan</li>
+                    </ul>
+                </div>
+                <a href="#book" class="btn">Select Plan</a>
+            </div>
+
+            <!-- Plan 599 -->
+            <div class="plan-card iptv-p">
+                <div>
+                    <span class="subtag">WITH IPTV</span>
+                    <div class="tagline" style="color: var(--iptv-purple);">Entertainment Pack</div>
+                    <div class="plan-price price-purple">₹599<span style="font-size:12px; font-weight:normal;">/mo</span></div>
+                    <div class="speed-pill pill-purple">Up to 30 Mbps</div>
+                    <ul class="features">
+                        <li>₹350 worth of TV Channels</li>
+                        <li>350+ HD Live TV Channels</li>
+                        <li>Airtel Xstream & ZEE5 Premium</li>
+                        <li>Popular OTT Apps Included</li>
+                    </ul>
+                </div>
+                <a href="#book" class="btn" style="background: var(--iptv-purple);">Select Plan</a>
+            </div>
+
+            <!-- Plan 799 -->
+            <div class="plan-card">
+                <div>
+                    <span class="subtag">Unlimited Data & Voice</span>
+                    <div class="tagline" style="color: #0056b3;">Standard High-Speed</div>
+                    <div class="plan-price price-blue">₹799<span style="font-size:12px; font-weight:normal;">/mo</span></div>
+                    <div class="speed-pill pill-blue">Up to 100 Mbps</div>
+                    <ul class="features">
+                        <li>Unlimited High-Speed Data</li>
+                        <li>Unlimited Voice Calls</li>
+                        <li>Free Wi-Fi Router Included</li>
+                        <li>24x7 Customer Support</li>
+                    </ul>
+                </div>
+                <a href="#book" class="btn" style="background: #0056b3;">Select Plan</a>
+            </div>
+
+            <!-- Plan 899 -->
+            <div class="plan-card iptv-g">
+                <div>
+                    <span class="subtag">WITH IPTV</span>
+                    <div class="tagline" style="color: var(--iptv-green);">100 Mbps + IPTV</div>
+                    <div class="plan-price price-green">₹899<span style="font-size:12px; font-weight:normal;">/mo</span></div>
+                    <div class="speed-pill pill-green">Up to 100 Mbps</div>
+                    <ul class="features">
+                        <li>350+ TV Channels & 20+ OTT Apps</li>
+                        <li>Disney+ Hotstar, ZEE5, SonyLIV</li>
+                        <li>Voot, ALTBalaji & More</li>
+                        <li>Free Wi-Fi Router & Setup Box</li>
+                    </ul>
+                </div>
+                <a href="#book" class="btn" style="background: var(--iptv-green);">Select Plan</a>
+            </div>
+
+            <!-- Plan 999 -->
+            <div class="plan-card ott-special">
+                <div>
+                    <span class="subtag">Unlimited Data & Voice</span>
+                    <div class="tagline" style="color: var(--ott-orange);">Free TV Channels</div>
+                    <div class="plan-price price-orange">₹999<span style="font-size:12px; font-weight:normal;">/mo</span></div>
+                    <div class="speed-pill pill-orange">Up to 100 Mbps</div>
+                    <ul class="features">
+                        <li>Unlimited Internet Only</li>
+                        <li>22+ OTT Apps Included</li>
+                        <li>Netflix + Amazon Prime Included</li>
+                        <li>24x7 Customer Support</li>
+                    </ul>
+                </div>
+                <a href="#book" class="btn" style="background: var(--ott-orange);">Select Plan</a>
+            </div>
+
+            <!-- Plan 1,199 -->
+            <div class="plan-card iptv-p">
+                <div>
+                    <span class="subtag">Premium Entertainment</span>
+                    <div class="tagline" style="color: var(--iptv-purple);">Prime & Netflix Combo</div>
+                    <div class="plan-price price-purple">₹1,199<span style="font-size:12px; font-weight:normal;">/mo</span></div>
+                    <div class="speed-pill pill-purple">Up to 100 Mbps</div>
+                    <ul class="features">
+                        <li>Includes 350+ TV Channels</li>
+                        <li>Amazon Prime Included</li>
+                        <li>Netflix Subscription Included</li>
+                        <li>Unlimited Data & Voice</li>
+                    </ul>
+                </div>
+                <a href="#book" class="btn" style="background: var(--iptv-purple);">Select Plan</a>
+            </div>
+
+            <!-- Plan 1,599 -->
+            <div class="plan-card ott-special">
+                <div>
+                    <span class="subtag">Super-Fast Speed</span>
+                    <div class="tagline" style="color: var(--ott-orange);">Ultimate Ultra-Fast</div>
+                    <div class="plan-price price-orange">₹1,599<span style="font-size:12px; font-weight:normal;">/mo</span></div>
+                    <div class="speed-pill pill-orange">Up to 300 Mbps</div>
+                    <ul class="features">
+                        <li>Disney+ Hotstar, ZEE5, SonyLIV</li>
+                        <li>Netflix & Amazon Prime Included</li>
+                        <li>300 Mbps Ultra-Fast Speed</li>
+                        <li>Premium Entertainment Package</li>
+                    </ul>
+                </div>
+                <a href="#book" class="btn" style="background: var(--ott-orange);">Select Plan</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section" id="book">
+        <div class="contact-info-box">
+            <h3>AIRTEL XTREME WIFI PROVIDER BHOPAL</h3>
+            <div class="address-text">
+                📍 NO 135 BAGMUGALIYA HOSHANGABAD ROAD BHOPAL M.P
+            </div>
+            <p>Direct Call: <strong>+91 8818814168</strong></p>
+            <p style="margin-top: 5px; color: #666;">Our executive in Bhopal will check feasibility and install within 2 hours.</p>
+        </div>
+
+        <div class="form-box">
+            <h3 style="margin-bottom: 18px; text-align: center;">Book New Connection</h3>
+            <form id="leadForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" placeholder="Enter 10-digit number" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="house">House No.</label>
+                    <input type="text" id="house" placeholder="Enter house / flat number" required>
+                </div>
+                <div class="form-group">
+                    <label for="area">Locality / Area in Bhopal</label>
+                    <input type="text" id="area" placeholder="e.g. Bagmugaliya, Hoshangabad Road, MP Nagar" required>
+                </div>
+                <div class="form-group">
+                    <label for="plan">Preferred Plan</label>
+                    <select id="plan" required>
+                        <option value="">Select a Plan</option>
+                        <option value="499">₹499 - 40 Mbps (Unlimited Data & Voice)</option>
+                        <option value="599">₹599 - 30 Mbps (350+ TV Channels, ZEE5)</option>
+                        <option value="799">₹799 - 100 Mbps (Unlimited Data & Voice)</option>
+                        <option value="899">₹899 - 100 Mbps (350+ TV Channels & 20+ OTT Apps)</option>
+                        <option value="999">₹999 - 100 Mbps (Internet Only + 22+ OTT + Netflix + Amazon Prime)</option>
+                        <option value="1199">₹1,199 - 100 Mbps (350+ TV Channels, Prime, Netflix)</option>
+                        <option value="1599">₹1,599 - 300 Mbps (Disney+ Hotstar, ZEE5, SonyLIV, Netflix, Prime)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; padding: 12px; font-size: 16px;">Request Callback</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>AIRTEL XTREME WIFI PROVIDER BHOPAL</strong></p>
+        <p>📍 NO 135 BAGMUGALIYA HOSHANGABAD ROAD BHOPAL M.P</p>
+        <p>📞 Contact: +91 8818814168 | T&C Apply. Taxes extra as applicable.</p>
+    </footer>
+
+    <div class="contact-bar">
+        <a href="tel:+918818814168" class="btn-call contact-btn">
+            📞 Call 8818814168
+        </a>
+        <a href="https://wa.me/918818814168?text=Hi,%20I%20am%20interested%20in%20a%20new%20Airtel%20Broadband%20connection%20in%20Bhopal." class="btn-whatsapp contact-btn" target="_blank">
+            💬 WhatsApp
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+            const house = document.getElementById('house').value.trim();
+            const area = document.getElementById('area').value.trim();
+            const plan = document.getElementById('plan');
+            const planText = plan.options[plan.selectedIndex].text;
+
+            const message =
+                `Hello, I want a new Airtel Broadband connection in Bhopal.%0A%0A` +
+                `Name: ${encodeURIComponent(name)}%0A` +
+                `Mobile: ${encodeURIComponent(mobile)}%0A` +
+                `House No.: ${encodeURIComponent(house)}%0A` +
+                `Area: ${encodeURIComponent(area)}%0A` +
+                `Preferred Plan: ${encodeURIComponent(planText)}`;
+
+            window.open(`https://wa.me/918818814168?text=${message}`, '_blank');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
